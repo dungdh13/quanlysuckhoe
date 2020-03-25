@@ -38,9 +38,9 @@ class ProfileUpdateForm(forms.ModelForm):
     sdt = forms.IntegerField(label="Số điện thoại", max_value=1000000000000000, required=False)
     khoa_phong = forms.CharField(label="Khoa phòng:",max_length=30, required=False)
     dia_chi = forms.CharField(label="Địa chỉ:",max_length=100,required=False)
-    MSBN = forms.IntegerField(label="Mã số bệnh nhân(bệnh nhân khai)", max_value = 1000000000000000, required=False)
-    cd_benh = forms.CharField(label="Chẩn đoán bệnh(bệnh nhân khai)",max_length=150, required=False)
-    lich_hen_kham = forms.DateField(label="Lịch hẹn khám(bệnh nhân khai)",required=False)
+    MSBN = forms.IntegerField(label="Mã số bệnh nhân(Phần dành riêng cho bệnh nhân và người nhà bệnh nhân)", max_value = 1000000000000000, required=False)
+    cd_benh = forms.CharField(label="Chẩn đoán bệnh(Phần dành riêng cho bệnh nhân và người nhà bệnh nhân)",max_length=150, required=False)
+    lich_hen_kham = forms.DateField(label="Lịch hẹn khám(Phần dành riêng cho bệnh nhân và người nhà bệnh nhân)",required=False)
     class Meta:
         model = Profile
         fields =['Ho_ten','sdt','khoa_phong','dia_chi','MSBN','cd_benh','lich_hen_kham']
