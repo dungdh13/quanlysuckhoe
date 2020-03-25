@@ -1,9 +1,3 @@
-
-
-
-
-
-
 {% extends "blog/base.html" %}
 
 {% block content %}
@@ -37,6 +31,43 @@
                     <input type="checkbox" name="kho_tho" class="form-check-input" id="kho_tho" {% if todo.kho_tho %}checked{% endif %}>
                     <label class="form-check-label" for="kho_tho">Khó thở</label>
                 </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="dau_hong" class="form-check-input" id="dau_hong" {% if todo.dau_hong %}checked{% endif %}>
+                    <label class="form-check-label" for="dau_hong">Đau họng</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="met_moi" class="form-check-input" id="met_moi" {% if todo.met_moi %}checked{% endif %}>
+                    <label class="form-check-label" for="met_moi">Mệt mỏi</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="dau_dau" class="form-check-input" id="dau_dau" {% if todo.kho_tho %}checked{% endif %}>
+                    <label class="form-check-label" for="dau_dau">Đau đầu</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="ret_run" class="form-check-input" id="ret_run" {% if todo.ret_run %}checked{% endif %}>
+                    <label class="form-check-label" for="ret_run">Rét run</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="dau_co" class="form-check-input" id="dau_co" {% if todo.dau_co %}checked{% endif %}>
+                    <label class="form-check-label" for="dau_co">Đau cơ</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="non" class="form-check-input" id="non" {% if todo.non %}checked{% endif %}>
+                    <label class="form-check-label" for="non">Nôn</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="buon_non" class="form-check-input" id="buon_non" {% if todo.buon_non %}checked{% endif %}>
+                    <label class="form-check-label" for="buon_non">Buồn nôn</label>
+                </div>
+
+
                 
                 <div class="form-group form-check">
                     <input type="checkbox" name="vung_dich" class="form-check-input" id="vung_dich" {% if todo.vung_dich %}checked{% endif %}>
