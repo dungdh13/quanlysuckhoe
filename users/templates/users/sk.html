@@ -1,0 +1,65 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <h2>Khai Báo tình trạng Sức khỏe</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+
+                <p>Tích vào các ô dưới đây nếu thấy đúng với bản thân:</p>
+                <div class="form-group form-check">
+                    <input type="checkbox" name="sot" class="form-check-input" id="sot">
+                    <label class="form-check-label" for="sot">Có triệu chứng sốt</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" name="ho" class="form-check-input" id="ho">
+                    <label class="form-check-label" for="ho">Có triệu chứng ho</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" name="kho_tho" class="form-check-input" id="kho_tho">
+                    <label class="form-check-label" for="kho_tho">Có triệu chứng khó thở</label>
+                </div>
+               
+                <div class="form-group form-check">
+                    <input type="checkbox" name="vung_dich" class="form-check-input" id="vung_dich">
+                    <label class="form-check-label" for="vung_dich">Có đi đên các quốc gia và vùng lãnh thổ có dịch</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" name="tiepxuc_f0" class="form-check-input" id="tiepxuc_f0">
+                    <label class="form-check-label" for="tiepxuc_f0">Tiếp xúc gần (≤ 2 mét) với người được chẩn đoán nhiễm COVID-19 (F0)</label>
+                </div>
+                
+                <div class="form-group form-check">
+                    <input type="checkbox" name="tiepxuc_f1" class="form-check-input" id="tiepxuc_f1">
+                    <label class="form-check-label" for="tiepxuc_f1">Tiếp xúc gần (≤ 2 mét) với người được chẩn đoán nhiễm COVID-19 (F1)</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tt_banthan">Xác định tình trạng của bản thân</label>
+                    <input type="text" name="tt_banthan" class="form-control" list="tt_banthan" required>
+                    <datalist id="tt_banthan">
+                        <option value="F0">
+                        <option value="F1">
+                        <option value="F2">
+                        <option value="F3">
+                        <option value="F4">
+                    </datalist>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Lưu</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

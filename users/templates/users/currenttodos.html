@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+   
+
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+        {% if todos %}
+            <div class="list-group">
+                {% for todo in todos %}
+                <a href="{% url 'viewtodo' todo.id %}" class="list-group-item list-group-item-action ">{{ todo.created }}</a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center">
+                <h2>Bạn chưa cập nhật sức khỏe 1 lần nào.</h2>
+            <br>
+            <a role="button" class="btn btn-primary" href="{% url 'sk' %}">CẬP NHAT</a>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock content %}
+
