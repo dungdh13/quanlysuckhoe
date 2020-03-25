@@ -17,6 +17,7 @@ class Profile(models.Model):
 class Todo(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     sot = models.BooleanField(default=False)
+    nhiet_do = models.IntegerField(default=37 ,null=True)
     ho = models.BooleanField(default=False)
     dau_hong = models.BooleanField(default=False)
     met_moi = models.BooleanField(default=False)

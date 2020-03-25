@@ -19,7 +19,9 @@
 
                 <div class="form-group form-check">
                     <input type="checkbox" name="sot" class="form-check-input" id="sot" {% if todo.sot %}checked{% endif %}>
-                    <label class="form-check-label" for="ho">Sot</label>
+                    <label class="form-check-label" for="ho">Sốt&emsp;Nhiệt độ: &emsp;</label>
+                    <input type="interger" name="nhiet_do" class="form-check-input" id="nhiet_do" value= "{{ todo.nhiet_do }}">
+                    <label class="form-check-label" for="nhiet_do"></label>
                 </div>
                 
                 <div class="form-group form-check">

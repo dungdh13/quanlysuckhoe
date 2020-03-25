@@ -51,4 +51,4 @@ class ProfileUpdateForm(forms.ModelForm):
 class TodoForm(ModelForm):
     class Meta:
         model = Todo
-        fields = ['sot', 'ho', 'kho_tho','dau_hong', 'met_moi','dau_dau','ret_run','dau_co','non','buon_non', 'tiepxuc_f0','tiepxuc_f1','vung_dich','tt_banthan']
+        fields = ['sot', 'nhiet_do','ho', 'kho_tho','dau_hong', 'met_moi','dau_dau','ret_run','dau_co','non','buon_non', 'tiepxuc_f0','tiepxuc_f1','vung_dich','tt_banthan']

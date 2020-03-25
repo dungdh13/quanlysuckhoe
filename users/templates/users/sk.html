@@ -6,8 +6,8 @@
             <h2>Khai Báo tình trạng Sức khỏe</h2>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
+    <div class="row justify-content-center mt-10">
+        <div class="col-md-10">
             {% if error %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -19,7 +19,9 @@
                 <p>Tích vào các ô dưới đây nếu thấy đúng với bản thân:</p>
                 <div class="form-group form-check">
                     <input type="checkbox" name="sot" class="form-check-input" id="sot">
-                    <label class="form-check-label" for="sot">Có triệu chứng sốt</label>
+                    <label class="form-check-label" for="sot">Có triệu chứng sốt. Nhiệt độ:&emsp;</label>
+                    <input type="integer" name="nhiet_do" class="form-check-input" id="nhiet_do">
+                    <label class="form-check-label" for="nhiet_do"></label>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" name="ho" class="form-check-input" id="ho">
